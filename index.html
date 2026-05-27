@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频制作 · 定制沟通</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", sans-serif;
+        }
+        body {
+            background: #f7f7f7;
+            padding: 20px 10px;内边距: 20像素 10像素;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;边框圆角: 12像素;边框圆角: 12px;边框圆角: 12像素;
+            padding: 25px;
+            max-width: 380px;最大宽度: 380像素;最大宽度: 380px;最大宽度: 380像素;最大宽度: 380px;最大宽度: 380像素;最大宽度: 380px;最大宽度: 380像素;
+            margin: 0 auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        h1 {
+            font-size: 24px;字体大小: 24像素;
+            color: #333;颜色: #333;
+            text-align: center;文本对齐: 居中;文本对齐: center;文本对齐: 居中;
+            margin-bottom: 20px;
+        }
+        .qrcode-container {        .二维码容器 {        .二维码容器 {        .二维码容器 {
+            text-align: center;文本对齐: 居中;文本对齐: center;文本对齐: 居中;文本对齐: center;文本对齐: 居中;文本对齐: center;文本对齐: 居中;
+            margin-bottom: 20px;
+        }
+        .qrcode {        .二维码 {        .二维码 {        .二维码 {
+            width: 220px;宽度: 220像素;宽度: 220像素;宽度: 220像素;
+            height: 220px;高度: 220像素;高度: 220像素;高度: 220像素;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+        .contact-info {        .联系信息 {
+            text-align: center;文本对齐: 居中;文本对齐: center;文本对齐: 居中;文本对齐: center居中;文本对齐: 居中;文本对齐: center居中;文本对齐: 居中;
+            margin-bottom: 20px;
+        }
+        .contact-info p {        .联系信息 p {
+            font-size: 16px;字体大小: 16px;
+            font-weight: bold;字体粗细: bold;
+            color: #333;颜色: #333;
+            margin-bottom: 10px;
+        }
+        .copy-btn {        .复制按钮 {
+            background: #007bff;背景: #007bff;
+            color: #fff;颜色: #fff;颜色: #fff;颜色: #fff;颜色: #fff;颜色: #fff;颜色: #fff;颜色: #fff;
+            border边框边框边框边框边框边框边框边框: none无;边框: 无;
+            border-radius: 8px;
+            padding: 10px 25px;
+            font-size: 16px;字体大小: 16px;
+            cursor: pointer;光标: 指针;
+            transition: background 0.2s;
+        }
+        .copy-btn:active {
+            background: #0056b3;背景: #0056b3;
+        }
+        .notice {        .提示 {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .notice h3 {
+            color: #d2691e;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>视频制作 · 定制沟通</h1>
+
+        <div class="qrcode-container">
+            <!-- 关键：改成相对路径，不要 / 开头 -->
+            < img class="qrcode" id="qr-img" src="qrcode.png" alt="客服联络二维码">
+        </div>
+
+        <div class="contact-info">
+            <p>联络号：<span id="contact">19196307594</span></p ><p>联系电话：<span id="contact">19196307594</span></p >
+            <button class="copy-btn" onclick="copyText()">复制联络号</button><button class="copy-btn" onclick="copyText()">复制联系电话</button>
+        </div>
+
+        <div class="notice">
+            <h3>定制沟通说明</h3>
+            <p>1. 沟通仅作为定制需求沟通以及收发文件。</p >
+            <p>2. 下单支付一律在淘宝平台付款。</p >
+            <p>3. 不接受任何第三方渠道支付。</p >
+        </div>
+    </div>
+
+    <script>
+        function copyText() {
+            const text = document.getElementById("contact").innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("已复制！打开企业微信粘贴添加即可");
+            }).catch(() => {
+                alert("复制失败，请手动记录联络号");警告("复制失败，请手动记录联络号");
+            });
+        }
+    </script>
+</body>
+</html>
