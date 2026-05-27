@@ -13,56 +13,56 @@
         }
         body {
             background: #f7f7f7;
-            padding: 20px 10px;内边距: 20像素 10像素;
+            padding: 20px 10px;
         }
         .card {
             background: #fff;
-            border-radius: 12px;边框圆角: 12像素;边框圆角: 12px;边框圆角: 12像素;
+            border-radius: 12px;
             padding: 25px;
-            max-width: 380px;最大宽度: 380像素;最大宽度: 380px;最大宽度: 380像素;最大宽度: 380px;最大宽度: 380像素;最大宽度: 380px;最大宽度: 380像素;
+            max-width: 380px;
             margin: 0 auto;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
         h1 {
-            font-size: 24px;字体大小: 24像素;
-            color: #333;颜色: #333;
-            text-align: center;文本对齐: 居中;文本对齐: center;文本对齐: 居中;
+            font-size: 24px;
+            color: #333;
+            text-align: center;
             margin-bottom: 20px;
         }
-        .qrcode-container {        .二维码容器 {        .二维码容器 {        .二维码容器 {
-            text-align: center;文本对齐: 居中;文本对齐: center;文本对齐: 居中;文本对齐: center;文本对齐: 居中;文本对齐: center;文本对齐: 居中;
+        .qrcode-container {
+            text-align: center;
             margin-bottom: 20px;
         }
-        .qrcode {        .二维码 {        .二维码 {        .二维码 {
-            width: 220px;宽度: 220像素;宽度: 220像素;宽度: 220像素;
-            height: 220px;高度: 220像素;高度: 220像素;高度: 220像素;
+        .qrcode {
+            width: 220px;
+            height: 220px;
             border-radius: 8px;
             border: 1px solid #eee;
         }
-        .contact-info {        .联系信息 {
-            text-align: center;文本对齐: 居中;文本对齐: center;文本对齐: 居中;文本对齐: center居中;文本对齐: 居中;文本对齐: center居中;文本对齐: 居中;
+        .contact-info {
+            text-align: center;
             margin-bottom: 20px;
         }
-        .contact-info p {        .联系信息 p {
-            font-size: 16px;字体大小: 16px;
-            font-weight: bold;字体粗细: bold;
-            color: #333;颜色: #333;
+        .contact-info p {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
             margin-bottom: 10px;
         }
-        .copy-btn {        .复制按钮 {
-            background: #007bff;背景: #007bff;
-            color: #fff;颜色: #fff;颜色: #fff;颜色: #fff;颜色: #fff;颜色: #fff;颜色: #fff;颜色: #fff;
-            border边框边框边框边框边框边框边框边框: none无;边框: 无;
+        .copy-btn {
+            background: #007bff;
+            color: #fff;
+            border: none;
             border-radius: 8px;
             padding: 10px 25px;
-            font-size: 16px;字体大小: 16px;
-            cursor: pointer;光标: 指针;
+            font-size: 16px;
+            cursor: pointer;
             transition: background 0.2s;
         }
         .copy-btn:active {
-            background: #0056b3;背景: #0056b3;
+            background: #0056b3;
         }
-        .notice {        .提示 {
+        .notice {
             font-size: 14px;
             color: #666;
             line-height: 1.8;
@@ -80,13 +80,12 @@
         <h1>视频制作 · 定制沟通</h1>
 
         <div class="qrcode-container">
-            <!-- 关键：改成相对路径，不要 / 开头 -->
             < img class="qrcode" id="qr-img" src="qrcode.png" alt="客服联络二维码">
         </div>
 
         <div class="contact-info">
-            <p>联络号：<span id="contact">19196307594</span></p ><p>联系电话：<span id="contact">19196307594</span></p >
-            <button class="copy-btn" onclick="copyText()">复制联络号</button><button class="copy-btn" onclick="copyText()">复制联系电话</button>
+            <p>联络号：<span id="contact">19196307594</span></p >
+            <button class="copy-btn" onclick="copyText()">复制联络号</button>
         </div>
 
         <div class="notice">
@@ -103,7 +102,7 @@
             navigator.clipboard.writeText(text).then(() => {
                 alert("已复制！打开企业微信粘贴添加即可");
             }).catch(() => {
-                alert("复制失败，请手动记录联络号");警告("复制失败，请手动记录联络号");
+                alert("复制失败，请手动记录联络号");
             });
         }
     </script>
